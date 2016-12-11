@@ -8,7 +8,6 @@ Beaglebone Black cape for my robot, see:
 ## To do list
 
 - Add other interfaces;
-- Add firing circuit;
 - Add reset button?
 - Document pins usage;
 - Think about future expansions;
