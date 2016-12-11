@@ -4528,6 +4528,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="MOT" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -4565,6 +4566,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="SUPPLY5" gate="G$1" x="165.1" y="106.68"/>
 <instance part="SUPPLY6" gate="G$1" x="66.04" y="106.68"/>
 <instance part="SUPPLY7" gate="G$1" x="157.48" y="106.68"/>
+<instance part="MOT" gate="G$1" x="210.82" y="96.52" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -4834,7 +4836,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="25.4" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="BC" class="0">
+<net name="BCOM" class="0">
 <segment>
 <pinref part="BPR" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="200.66" x2="22.86" y2="200.66" width="0.1524" layer="91"/>
@@ -4845,32 +4847,52 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="22.86" y1="205.74" x2="25.4" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="B0" class="0">
+<net name="BAV_DR" class="0">
 <segment>
 <pinref part="BPR" gate="G$1" pin="2"/>
 <wire x1="30.48" y1="198.12" x2="22.86" y2="198.12" width="0.1524" layer="91"/>
 <label x="25.4" y="198.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="BBB" gate="G$1" pin="TIMER4"/>
+<wire x1="68.58" y1="162.56" x2="83.82" y2="162.56" width="0.1524" layer="91"/>
+<label x="68.58" y="162.56" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="B1" class="0">
+<net name="BAV_GA" class="0">
 <segment>
 <pinref part="BPR" gate="G$1" pin="3"/>
 <wire x1="30.48" y1="195.58" x2="22.86" y2="195.58" width="0.1524" layer="91"/>
 <label x="25.4" y="195.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="BBB" gate="G$1" pin="TIMER7"/>
+<wire x1="154.94" y1="162.56" x2="139.7" y2="162.56" width="0.1524" layer="91"/>
+<label x="147.32" y="162.56" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="B2" class="0">
+<net name="BAR_DR" class="0">
 <segment>
 <pinref part="BPR" gate="G$1" pin="4"/>
 <wire x1="30.48" y1="193.04" x2="22.86" y2="193.04" width="0.1524" layer="91"/>
 <label x="25.4" y="193.04" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="BBB" gate="G$1" pin="TIMER5"/>
+<wire x1="68.58" y1="160.02" x2="83.82" y2="160.02" width="0.1524" layer="91"/>
+<label x="68.58" y="160.02" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="B3" class="0">
+<net name="BAR_GA" class="0">
 <segment>
 <pinref part="BPR" gate="G$1" pin="5"/>
 <wire x1="30.48" y1="190.5" x2="22.86" y2="190.5" width="0.1524" layer="91"/>
 <label x="25.4" y="190.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="BBB" gate="G$1" pin="TIMER6"/>
+<wire x1="154.94" y1="160.02" x2="139.7" y2="160.02" width="0.1524" layer="91"/>
+<label x="147.32" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -4885,6 +4907,78 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="139.7" y1="101.6" x2="157.48" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <wire x1="157.48" y1="101.6" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DIR_MOT_DR0" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="GPIO1_28"/>
+<wire x1="162.56" y1="91.44" x2="139.7" y2="91.44" width="0.1524" layer="91"/>
+<label x="147.32" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="101.6" x2="205.74" y2="101.6" width="0.1524" layer="91"/>
+<label x="185.42" y="101.6" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM_MOT_DR" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="EHRPWM1A"/>
+<wire x1="162.56" y1="88.9" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
+<label x="147.32" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="3"/>
+<wire x1="185.42" y1="96.52" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
+<label x="185.42" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PWM_MOT_GA" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="EHRPWM1B"/>
+<wire x1="162.56" y1="86.36" x2="139.7" y2="86.36" width="0.1524" layer="91"/>
+<label x="147.32" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="6"/>
+<wire x1="185.42" y1="88.9" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
+<label x="185.42" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIR_MOT_DR1" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="UART4_TXD"/>
+<wire x1="60.96" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="91"/>
+<label x="60.96" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="99.06" x2="205.74" y2="99.06" width="0.1524" layer="91"/>
+<label x="185.42" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIR_MOT_GA0" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="GPIO1_16"/>
+<wire x1="60.96" y1="86.36" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
+<label x="60.96" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="4"/>
+<wire x1="185.42" y1="93.98" x2="205.74" y2="93.98" width="0.1524" layer="91"/>
+<label x="185.42" y="93.98" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DIR_MOT_GA1" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="UART2_TXD"/>
+<wire x1="60.96" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<label x="60.96" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MOT" gate="G$1" pin="5"/>
+<wire x1="185.42" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
+<label x="185.42" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
