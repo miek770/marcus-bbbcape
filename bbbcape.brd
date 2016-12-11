@@ -1274,7 +1274,9 @@ design rules under a new name.</description>
 <signal name="BCOM">
 <contactref element="BPR" pad="1"/>
 <contactref element="R1" pad="P$1"/>
+<contactref element="BBB" pad="12"/>
 <wire x1="-66.04" y1="95.25" x2="-41.91" y2="95.25" width="0" layer="19" extent="1-1"/>
+<wire x1="1.27" y1="13.97" x2="-41.91" y2="95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BAV_DR">
 <contactref element="BPR" pad="2"/>
