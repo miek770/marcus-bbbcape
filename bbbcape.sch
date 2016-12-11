@@ -4529,6 +4529,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="MOT" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
+<part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="CAM" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
+<part name="6V1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4567,6 +4572,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="SUPPLY6" gate="G$1" x="66.04" y="106.68"/>
 <instance part="SUPPLY7" gate="G$1" x="157.48" y="106.68"/>
 <instance part="MOT" gate="G$1" x="210.82" y="96.52" rot="R180"/>
+<instance part="GND13" gate="1" x="203.2" y="78.74" rot="R180"/>
+<instance part="CAM" gate="G$1" x="210.82" y="68.58" rot="R180"/>
+<instance part="6V1" gate="G$1" x="195.58" y="76.2"/>
+<instance part="SUPPLY8" gate="G$1" x="187.96" y="76.2"/>
+<instance part="SUPPLY9" gate="G$1" x="180.34" y="76.2"/>
 </instances>
 <busses>
 </busses>
@@ -4703,6 +4713,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="22.86" y1="10.16" x2="25.4" y2="10.16" width="0.1524" layer="91"/>
 <junction x="25.4" y="10.16"/>
 </segment>
+<segment>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="203.2" y1="76.2" x2="203.2" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="73.66" x2="205.74" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="CAM" gate="G$1" pin="1"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -4785,6 +4801,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="139.7" y1="96.52" x2="165.1" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="96.52" x2="165.1" y2="99.06" width="0.1524" layer="91"/>
 <junction x="165.1" y="99.06"/>
+</segment>
+<segment>
+<pinref part="SUPPLY9" gate="G$1" pin="5V"/>
+<wire x1="180.34" y1="76.2" x2="180.34" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="CAM" gate="G$1" pin="4"/>
+<wire x1="180.34" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
+<label x="198.12" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DEAD" class="0">
@@ -4908,6 +4931,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <wire x1="157.48" y1="101.6" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
+<wire x1="187.96" y1="76.2" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="CAM" gate="G$1" pin="3"/>
+<wire x1="187.96" y1="68.58" x2="205.74" y2="68.58" width="0.1524" layer="91"/>
+<label x="198.12" y="68.58" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="DIR_MOT_DR0" class="0">
 <segment>
@@ -4979,6 +5009,39 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="MOT" gate="G$1" pin="5"/>
 <wire x1="185.42" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 <label x="185.42" y="91.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="6V1" gate="G$1" pin="VCC"/>
+<wire x1="195.58" y1="76.2" x2="195.58" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="CAM" gate="G$1" pin="2"/>
+<wire x1="195.58" y1="71.12" x2="205.74" y2="71.12" width="0.1524" layer="91"/>
+<label x="198.12" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART1_TX" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="UART1_TXD"/>
+<wire x1="157.48" y1="76.2" x2="139.7" y2="76.2" width="0.1524" layer="91"/>
+<label x="147.32" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CAM" gate="G$1" pin="5"/>
+<wire x1="193.04" y1="63.5" x2="205.74" y2="63.5" width="0.1524" layer="91"/>
+<label x="193.04" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="UART1_RX" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="UART1_RXD"/>
+<wire x1="157.48" y1="73.66" x2="139.7" y2="73.66" width="0.1524" layer="91"/>
+<label x="147.32" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CAM" gate="G$1" pin="6"/>
+<wire x1="193.04" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
+<label x="193.04" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
