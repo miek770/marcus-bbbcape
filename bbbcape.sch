@@ -5422,9 +5422,9 @@ https://www.adafruit.com/product/1489</description>
 <wire x1="-2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.254" layer="94"/>
-<pin name="P$1" x="-7.62" y="0" visible="pin" length="middle"/>
-<pin name="P$2" x="7.62" y="0" visible="pin" length="middle" rot="R180"/>
-<text x="0" y="-3.048" size="1.778" layer="95" align="bottom-center">&gt;Name</text>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
+<pin name="P$2" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
+<text x="0" y="6.096" size="1.778" layer="95" align="bottom-center">&gt;Name</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5608,9 +5608,7 @@ VDD = 5.0V, from DC-DC converter
 <instance part="C2" gate="G$1" x="10.16" y="48.26"/>
 <instance part="GND19" gate="1" x="134.62" y="10.16"/>
 <instance part="C3" gate="G$1" x="149.86" y="20.32"/>
-<instance part="S1" gate="G$1" x="55.88" y="137.16" smashed="yes">
-<attribute name="NAME" x="55.88" y="144.272" size="1.778" layer="95" align="bottom-center"/>
-</instance>
+<instance part="S1" gate="G$1" x="55.88" y="137.16"/>
 </instances>
 <busses>
 </busses>
@@ -6015,9 +6013,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="160.02" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="S1" gate="G$1" pin="P$1"/>
 <wire x1="43.18" y1="137.16" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
 <label x="43.18" y="137.16" size="1.778" layer="95"/>
+<pinref part="S1" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="BAV_DR" class="0">
@@ -6068,9 +6066,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="160.02" y="160.02" size="1.778" layer="95"/>
 </segment>
 <segment>
+<wire x1="68.58" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
+<label x="60.96" y="137.16" size="1.778" layer="95"/>
 <pinref part="S1" gate="G$1" pin="P$2"/>
-<wire x1="66.04" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
-<label x="63.5" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
