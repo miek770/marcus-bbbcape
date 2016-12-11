@@ -1236,6 +1236,7 @@ design rules under a new name.</description>
 <contactref element="R5" pad="P$1"/>
 <contactref element="R7" pad="P$1"/>
 <contactref element="R9" pad="P$1"/>
+<contactref element="SHLD1" pad="8"/>
 <wire x1="-82.55" y1="-200.66" x2="-82.55" y2="-162.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-82.55" y1="-238.76" x2="-82.55" y2="-200.66" width="0" layer="19" extent="1-1"/>
 <wire x1="-82.55" y1="-276.86" x2="-82.55" y2="-238.76" width="0" layer="19" extent="1-1"/>
@@ -1250,7 +1251,8 @@ design rules under a new name.</description>
 <wire x1="52.07" y1="57.15" x2="52.07" y2="54.61" width="0" layer="19" extent="1-1"/>
 <wire x1="49.53" y1="57.15" x2="52.07" y2="57.15" width="0" layer="19" extent="1-1"/>
 <wire x1="49.53" y1="54.61" x2="52.07" y2="54.61" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.24" y1="95.25" x2="49.53" y2="57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.24" y1="90.17" x2="49.53" y2="57.15" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.24" y1="95.25" x2="-15.24" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-17.78" y1="95.25" x2="-15.24" y2="95.25" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.32" y1="95.25" x2="-17.78" y2="95.25" width="0" layer="19" extent="1-1"/>
 <wire x1="-22.86" y1="95.25" x2="-20.32" y2="95.25" width="0" layer="19" extent="1-1"/>
@@ -1288,46 +1290,52 @@ design rules under a new name.</description>
 <wire x1="-27.94" y1="95.25" x2="-25.4" y2="95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="5V">
-<contactref element="5VO" pad="1"/>
-<contactref element="5VO" pad="2"/>
 <contactref element="SHLD0" pad="2"/>
 <contactref element="R1" pad="P$2"/>
-<contactref element="BBB" pad="51"/>
 <contactref element="BBB" pad="53"/>
-<contactref element="BBB" pad="52"/>
 <contactref element="BBB" pad="54"/>
 <contactref element="CAM" pad="4"/>
 <contactref element="RF_AV_DR" pad="2"/>
 <wire x1="-74.93" y1="-48.26" x2="-80.01" y2="-67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="49.53" y1="6.35" x2="-74.93" y2="-48.26" width="0" layer="19" extent="1-1"/>
-<wire x1="52.07" y1="6.35" x2="49.53" y2="6.35" width="0" layer="19" extent="1-1"/>
-<wire x1="52.07" y1="8.89" x2="52.07" y2="6.35" width="0" layer="19" extent="1-1"/>
-<wire x1="49.53" y1="8.89" x2="49.53" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="49.53" y1="8.89" x2="-74.93" y2="-48.26" width="0" layer="19" extent="1-1"/>
+<wire x1="52.07" y1="8.89" x2="49.53" y2="8.89" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.72" y1="95.25" x2="49.53" y2="8.89" width="0" layer="19" extent="1-1"/>
 <wire x1="-58.42" y1="95.25" x2="-45.72" y2="95.25" width="0" layer="19" extent="1-1"/>
-<wire x1="-63.5" y1="90.17" x2="-58.42" y2="95.25" width="0" layer="19" extent="1-1"/>
-<wire x1="-66.04" y1="90.17" x2="-63.5" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DEAD">
 <contactref element="SHLD1" pad="1"/>
+<contactref element="BBB" pad="15"/>
+<wire x1="3.81" y1="19.05" x2="-33.02" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SHLD0">
 <contactref element="SHLD1" pad="2"/>
+<contactref element="BBB" pad="17"/>
+<wire x1="3.81" y1="21.59" x2="-30.48" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SHLD1">
 <contactref element="SHLD1" pad="3"/>
+<contactref element="BBB" pad="21"/>
+<wire x1="3.81" y1="26.67" x2="-27.94" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SHLD2">
 <contactref element="SHLD1" pad="4"/>
+<contactref element="BBB" pad="23"/>
+<wire x1="3.81" y1="29.21" x2="-25.4" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SHLD3">
 <contactref element="SHLD1" pad="5"/>
+<contactref element="BBB" pad="25"/>
+<wire x1="3.81" y1="31.75" x2="-22.86" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RESET">
 <contactref element="SHLD1" pad="6"/>
+<contactref element="BBB" pad="27"/>
+<wire x1="3.81" y1="34.29" x2="-20.32" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FREE">
 <contactref element="SHLD1" pad="7"/>
+<contactref element="BBB" pad="29"/>
+<wire x1="3.81" y1="36.83" x2="-17.78" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BCOM">
 <contactref element="BPR" pad="1"/>
@@ -1440,6 +1448,15 @@ design rules under a new name.</description>
 <contactref element="R8" pad="P$1"/>
 <wire x1="-82.55" y1="-257.81" x2="-74.93" y2="-276.86" width="0" layer="19" extent="1-1"/>
 <wire x1="49.53" y1="46.99" x2="-82.55" y2="-257.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="VDD">
+<contactref element="BBB" pad="51"/>
+<contactref element="5VO" pad="1"/>
+<contactref element="5VO" pad="2"/>
+<contactref element="BBB" pad="52"/>
+<wire x1="49.53" y1="6.35" x2="52.07" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-63.5" y1="90.17" x2="49.53" y2="6.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-66.04" y1="90.17" x2="-63.5" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

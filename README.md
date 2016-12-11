@@ -7,7 +7,6 @@ Beaglebone Black cape for my robot, see:
 
 ## To do list
 
-- Check which pins I can really use for the shield circuit, and then connect it;
 - Add other interfaces;
 - Add firing circuit;
 - Add reset button?
