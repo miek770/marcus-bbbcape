@@ -7,10 +7,7 @@ Beaglebone Black cape for my robot, see:
 
 ## To do list
 
-- Add toggle switch for power (either use vbatt through dc-dc converters or 5V connector on the BBB itself);
-- Check which pins I can really use for the shield circuit;
-- Check if I can power the BBB from the headers;
-- Connect the bumpers (BC is an input, B0 to B3 are outputs);
+- Check which pins I can really use for the shield circuit, and then connect it;
 - Add other interfaces;
 - Add firing circuit;
 - Add reset button?
