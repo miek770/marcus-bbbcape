@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5386,6 +5386,69 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="michel">
+<packages>
+<package name="6MM-SLIM">
+<description>Tactile Switch Buttons (6mm slim)
+
+https://www.adafruit.com/product/1489</description>
+<pad name="P$1" x="-3.81" y="0" drill="0.8"/>
+<pad name="P$2" x="3.81" y="0" drill="0.8"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="1.27" width="0.127" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="0.635" x2="-1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-0.635" x2="-2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-0.635" x2="1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="0.635" x2="2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="1.27" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.27" y2="0.635" width="0.127" layer="21"/>
+<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;Name</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;Value</text>
+</package>
+</packages>
+<symbols>
+<symbol name="TACTILE-SPST">
+<description>SPST tactile switch (pushbutton)</description>
+<wire x1="-2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="-7.62" y="0" visible="pin" length="middle"/>
+<pin name="P$2" x="7.62" y="0" visible="pin" length="middle" rot="R180"/>
+<text x="0" y="-3.048" size="1.778" layer="95" align="bottom-center">&gt;Name</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TACTILE-SPST-6MM-SLIM">
+<description>Tactile Switch Buttons (6mm slim)
+
+https://www.adafruit.com/product/1489</description>
+<gates>
+<gate name="G$1" symbol="TACTILE-SPST" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="6MM-SLIM">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5462,6 +5525,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C2" library="SparkFun-Capacitors" deviceset="0.1UF-50V-20%(PTH)" device="KIT-EZ"/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF-50V-20%(PTH)" device="KIT-EZ"/>
+<part name="S1" library="michel" deviceset="TACTILE-SPST-6MM-SLIM" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5544,6 +5608,9 @@ VDD = 5.0V, from DC-DC converter
 <instance part="C2" gate="G$1" x="10.16" y="48.26"/>
 <instance part="GND19" gate="1" x="134.62" y="10.16"/>
 <instance part="C3" gate="G$1" x="149.86" y="20.32"/>
+<instance part="S1" gate="G$1" x="55.88" y="137.16" smashed="yes">
+<attribute name="NAME" x="55.88" y="144.272" size="1.778" layer="95" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5947,6 +6014,11 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="167.64" y1="157.48" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
 <label x="160.02" y="157.48" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="P$1"/>
+<wire x1="43.18" y1="137.16" x2="48.26" y2="137.16" width="0.1524" layer="91"/>
+<label x="43.18" y="137.16" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="BAV_DR" class="0">
 <segment>
@@ -5994,6 +6066,11 @@ VDD = 5.0V, from DC-DC converter
 <pinref part="BBB" gate="G$1" pin="TIMER6"/>
 <wire x1="167.64" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <label x="160.02" y="160.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="S1" gate="G$1" pin="P$2"/>
+<wire x1="66.04" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
+<label x="63.5" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3.3V" class="0">

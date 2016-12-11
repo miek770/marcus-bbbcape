@@ -1025,6 +1025,37 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="michel">
+<packages>
+<package name="6MM-SLIM">
+<description>Tactile Switch Buttons (6mm slim)
+
+https://www.adafruit.com/product/1489</description>
+<pad name="P$1" x="-3.81" y="0" drill="0.8"/>
+<pad name="P$2" x="3.81" y="0" drill="0.8"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-2.54" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-1.27" x2="2.54" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="1.27" width="0.127" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="0.635" x2="-1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-0.635" x2="-2.54" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-0.635" x2="1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="0.635" x2="2.54" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="1.27" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.27" y2="0.635" width="0.127" layer="21"/>
+<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;Name</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;Value</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1263,6 +1294,7 @@ design rules under a new name.</description>
 <element name="C3" library="SparkFun-Capacitors" package="CAP-PTH-SMALL-KIT" value="" x="-80.01" y="-353.06">
 <attribute name="PROD_ID" value="CAP-08370" x="-80.01" y="-353.06" size="1.778" layer="27" display="off"/>
 </element>
+<element name="S1" library="michel" package="6MM-SLIM" value="TACTILE-SPST-6MM-SLIM" x="-81.28" y="-370.84"/>
 </elements>
 <signals>
 <signal name="AIN0">
@@ -1414,8 +1446,10 @@ design rules under a new name.</description>
 <contactref element="BPR" pad="1"/>
 <contactref element="R1" pad="P$1"/>
 <contactref element="BBB" pad="12"/>
+<contactref element="S1" pad="P$1"/>
+<wire x1="1.27" y1="13.97" x2="-85.09" y2="-370.84" width="0" layer="19" extent="1-1"/>
+<wire x1="-41.91" y1="95.25" x2="1.27" y2="13.97" width="0" layer="19" extent="1-1"/>
 <wire x1="-66.04" y1="95.25" x2="-41.91" y2="95.25" width="0" layer="19" extent="1-1"/>
-<wire x1="1.27" y1="13.97" x2="-41.91" y2="95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BAV_DR">
 <contactref element="BPR" pad="2"/>
@@ -1435,7 +1469,9 @@ design rules under a new name.</description>
 <signal name="BAR_GA">
 <contactref element="BPR" pad="5"/>
 <contactref element="BBB" pad="10"/>
-<wire x1="1.27" y1="11.43" x2="-31.75" y2="95.25" width="0" layer="19" extent="1-1"/>
+<contactref element="S1" pad="P$2"/>
+<wire x1="1.27" y1="11.43" x2="-77.47" y2="-370.84" width="0" layer="19" extent="1-1"/>
+<wire x1="-31.75" y1="95.25" x2="1.27" y2="11.43" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="BBB" pad="49"/>
