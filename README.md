@@ -13,6 +13,7 @@ The cape should be stackable, which means that P8 and P9 should be female header
 
 ## To do list
 
+- Disconnect the switch from the bumpers. It should be completely separate;
 - Add other interfaces;
 - Document pins usage. Not sure if this is really necessary, the schematic is clear enough. Just need to integrate this info in marcus-base/modules/pins.py which holds a dictionary of pins usage;
 - Complete and check pretty much everything.
