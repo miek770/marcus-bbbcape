@@ -2,8 +2,8 @@
 
 Beaglebone Black cape for my robot, see:
 
-- marcus-base
-- marcus-boucliers
+- [marcus-base](https://github.com/miek770/marcus-base)
+- [marcus-boucliers](https://github.com/miek770/marcus-boucliers)
 
 ## To do list
 
