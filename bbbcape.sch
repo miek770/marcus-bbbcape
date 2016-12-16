@@ -145,11 +145,11 @@
 <library name="adafruit">
 <packages>
 <package name="BEAGLEBONE_SHIELD">
-<wire x1="54.61" y1="73.66" x2="54.61" y2="14.605" width="0.127" layer="20"/>
+<wire x1="54.61" y1="73.66" x2="54.61" y2="14.605" width="0.127" layer="51"/>
 <wire x1="54.61" y1="14.605" x2="54.61" y2="6.35" width="0.127" layer="51" style="shortdash"/>
-<wire x1="12.7" y1="86.36" x2="0" y2="73.66" width="0.127" layer="20" curve="90"/>
-<wire x1="54.61" y1="73.66" x2="41.91" y2="86.36" width="0.127" layer="20" curve="90"/>
-<wire x1="12.7" y1="86.36" x2="41.91" y2="86.36" width="0.127" layer="20"/>
+<wire x1="12.7" y1="86.36" x2="0" y2="73.66" width="0.127" layer="51" curve="90"/>
+<wire x1="54.61" y1="73.66" x2="41.91" y2="86.36" width="0.127" layer="51" curve="90"/>
+<wire x1="12.7" y1="86.36" x2="41.91" y2="86.36" width="0.127" layer="51"/>
 <wire x1="5.08" y1="17.78" x2="5.715" y2="18.415" width="0.1524" layer="21"/>
 <wire x1="5.715" y1="18.415" x2="5.715" y2="19.685" width="0.1524" layer="21"/>
 <wire x1="5.715" y1="19.685" x2="5.08" y2="20.32" width="0.1524" layer="21"/>
@@ -475,15 +475,15 @@
 <wire x1="53.975" y1="74.295" x2="53.34" y2="73.66" width="0.1524" layer="21"/>
 <wire x1="49.53" y1="76.2" x2="53.34" y2="76.2" width="0.1524" layer="21"/>
 <wire x1="0" y1="6.35" x2="6.35" y2="0" width="0.127" layer="51" style="shortdash" curve="90"/>
-<wire x1="0" y1="73.66" x2="0" y2="14.605" width="0.127" layer="20"/>
+<wire x1="0" y1="73.66" x2="0" y2="14.605" width="0.127" layer="51"/>
 <wire x1="48.26" y1="0" x2="54.61" y2="6.35" width="0.127" layer="51" style="shortdash" curve="90"/>
 <wire x1="6.35" y1="0" x2="48.26" y2="0" width="0.127" layer="51" style="shortdash"/>
 <wire x1="0" y1="14.605" x2="0" y2="6.35" width="0.127" layer="51" style="shortdash"/>
-<wire x1="0" y1="14.605" x2="12.7" y2="14.605" width="0.127" layer="20"/>
-<wire x1="41.91" y1="14.605" x2="54.61" y2="14.605" width="0.127" layer="20"/>
-<wire x1="18.415" y1="20.32" x2="36.195" y2="20.32" width="0.127" layer="20"/>
-<wire x1="18.415" y1="20.32" x2="12.7" y2="14.605" width="0.127" layer="20" curve="90"/>
-<wire x1="36.195" y1="20.32" x2="41.91" y2="14.605" width="0.127" layer="20" curve="-90"/>
+<wire x1="0" y1="14.605" x2="12.7" y2="14.605" width="0.127" layer="51"/>
+<wire x1="41.91" y1="14.605" x2="54.61" y2="14.605" width="0.127" layer="51"/>
+<wire x1="18.415" y1="20.32" x2="36.195" y2="20.32" width="0.127" layer="51"/>
+<wire x1="18.415" y1="20.32" x2="12.7" y2="14.605" width="0.127" layer="51" curve="90"/>
+<wire x1="36.195" y1="20.32" x2="41.91" y2="14.605" width="0.127" layer="51" curve="-90"/>
 <pad name="1" x="4.445" y="19.05" drill="1" shape="square" rot="R90"/>
 <pad name="2" x="1.905" y="19.05" drill="1" rot="R90"/>
 <pad name="3" x="4.445" y="21.59" drill="1" rot="R90"/>

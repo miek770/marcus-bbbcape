@@ -144,7 +144,7 @@
 <plain>
 <wire x1="53.645" y1="0" x2="53.645" y2="58.41" width="0.254" layer="20"/>
 <wire x1="53.645" y1="58.41" x2="0" y2="58.41" width="0.254" layer="20"/>
-<wire x1="0" y1="58.41" x2="0" y2="0" width="0.254" layer="21"/>
+<wire x1="0" y1="58.41" x2="0" y2="0" width="0.254" layer="20"/>
 <text x="6.35" y="52.07" size="1.778" layer="21">+</text>
 <text x="13.97" y="52.07" size="1.778" layer="21">1</text>
 <text x="29.21" y="52.07" size="1.778" layer="21">1</text>
@@ -403,11 +403,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <library name="adafruit">
 <packages>
 <package name="BEAGLEBONE_SHIELD">
-<wire x1="54.61" y1="73.66" x2="54.61" y2="14.605" width="0.127" layer="20"/>
+<wire x1="54.61" y1="73.66" x2="54.61" y2="14.605" width="0.127" layer="51"/>
 <wire x1="54.61" y1="14.605" x2="54.61" y2="6.35" width="0.127" layer="51" style="shortdash"/>
-<wire x1="12.7" y1="86.36" x2="0" y2="73.66" width="0.127" layer="20" curve="90"/>
-<wire x1="54.61" y1="73.66" x2="41.91" y2="86.36" width="0.127" layer="20" curve="90"/>
-<wire x1="12.7" y1="86.36" x2="41.91" y2="86.36" width="0.127" layer="20"/>
+<wire x1="12.7" y1="86.36" x2="0" y2="73.66" width="0.127" layer="51" curve="90"/>
+<wire x1="54.61" y1="73.66" x2="41.91" y2="86.36" width="0.127" layer="51" curve="90"/>
+<wire x1="12.7" y1="86.36" x2="41.91" y2="86.36" width="0.127" layer="51"/>
 <wire x1="5.08" y1="17.78" x2="5.715" y2="18.415" width="0.1524" layer="21"/>
 <wire x1="5.715" y1="18.415" x2="5.715" y2="19.685" width="0.1524" layer="21"/>
 <wire x1="5.715" y1="19.685" x2="5.08" y2="20.32" width="0.1524" layer="21"/>
@@ -733,15 +733,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="53.975" y1="74.295" x2="53.34" y2="73.66" width="0.1524" layer="21"/>
 <wire x1="49.53" y1="76.2" x2="53.34" y2="76.2" width="0.1524" layer="21"/>
 <wire x1="0" y1="6.35" x2="6.35" y2="0" width="0.127" layer="51" style="shortdash" curve="90"/>
-<wire x1="0" y1="73.66" x2="0" y2="14.605" width="0.127" layer="20"/>
+<wire x1="0" y1="73.66" x2="0" y2="14.605" width="0.127" layer="51"/>
 <wire x1="48.26" y1="0" x2="54.61" y2="6.35" width="0.127" layer="51" style="shortdash" curve="90"/>
 <wire x1="6.35" y1="0" x2="48.26" y2="0" width="0.127" layer="51" style="shortdash"/>
 <wire x1="0" y1="14.605" x2="0" y2="6.35" width="0.127" layer="51" style="shortdash"/>
-<wire x1="0" y1="14.605" x2="12.7" y2="14.605" width="0.127" layer="20"/>
-<wire x1="41.91" y1="14.605" x2="54.61" y2="14.605" width="0.127" layer="20"/>
-<wire x1="18.415" y1="20.32" x2="36.195" y2="20.32" width="0.127" layer="20"/>
-<wire x1="18.415" y1="20.32" x2="12.7" y2="14.605" width="0.127" layer="20" curve="90"/>
-<wire x1="36.195" y1="20.32" x2="41.91" y2="14.605" width="0.127" layer="20" curve="-90"/>
+<wire x1="0" y1="14.605" x2="12.7" y2="14.605" width="0.127" layer="51"/>
+<wire x1="41.91" y1="14.605" x2="54.61" y2="14.605" width="0.127" layer="51"/>
+<wire x1="18.415" y1="20.32" x2="36.195" y2="20.32" width="0.127" layer="51"/>
+<wire x1="18.415" y1="20.32" x2="12.7" y2="14.605" width="0.127" layer="51" curve="90"/>
+<wire x1="36.195" y1="20.32" x2="41.91" y2="14.605" width="0.127" layer="51" curve="-90"/>
 <pad name="1" x="4.445" y="19.05" drill="1" shape="square" rot="R90"/>
 <pad name="2" x="1.905" y="19.05" drill="1" rot="R90"/>
 <pad name="3" x="4.445" y="21.59" drill="1" rot="R90"/>
@@ -1106,34 +1106,37 @@ https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-(0.8V-1
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun">
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<designrules name="oshpark-2layer">
+<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
+Die Standard-Design-Rules sind so gewählt, dass sie für 
+die meisten Anwendungen passen. Sollte ihre Platine 
+besondere Anforderungen haben, treffen Sie die erforderlichen
+Einstellungen hier und speichern die Design Rules unter 
+einem neuen Namen ab.</description>
+<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
+&lt;p&gt;
+Please make sure your boards conform to these design rules.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="8mil"/>
-<param name="mdWirePad" value="8mil"/>
-<param name="mdWireVia" value="8mil"/>
-<param name="mdPadPad" value="8mil"/>
-<param name="mdPadVia" value="8mil"/>
-<param name="mdViaVia" value="8mil"/>
-<param name="mdSmdPad" value="8mil"/>
-<param name="mdSmdVia" value="8mil"/>
-<param name="mdSmdSmd" value="8mil"/>
+<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
+<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="8mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdCopperDimension" value="15mil"/>
+<param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
-<param name="msDrill" value="20mil"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="13mil"/>
+<param name="msMicroVia" value="13mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -1142,15 +1145,15 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="12mil"/>
+<param name="rlMinPadTop" value="7mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMinPadInner" value="7mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="12mil"/>
+<param name="rlMinPadBottom" value="7mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="10mil"/>
+<param name="rlMinViaOuter" value="7mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="10mil"/>
+<param name="rlMinViaInner" value="7mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -1163,11 +1166,11 @@ design rules under a new name.</description>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="2.5mil"/>
+<param name="mlMaxStopFrame" value="2.5mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="20mil"/>
+<param name="mlViaStopLimit" value="0mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1995,6 +1998,10 @@ design rules under a new name.</description>
 <wire x1="38.1" y1="19.05" x2="38.1" y2="18.7325" width="0.254" layer="16"/>
 </signal>
 </signals>
+<errors>
+<approved hash="4,1,10c926344bc91b3f"/>
+<approved hash="4,16,10c926344bc91b3f"/>
+</errors>
 </board>
 </drawing>
 </eagle>
