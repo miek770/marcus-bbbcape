@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5415,6 +5415,24 @@ https://www.adafruit.com/product/1489</description>
 <text x="-2.54" y="1.905" size="1.27" layer="25">&gt;Name</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;Value</text>
 </package>
+<package name="SEEED-MP1584">
+<description>Adjustable Step-Down DC&amp;DC Converter (0.8V - 18V&amp;3A)
+Seeed Studio SKU 106990005
+https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-(0.8V-18V%26amp%3B3A)-p-1716.html#</description>
+<pad name="IN1-" x="-9.25" y="4" drill="0.8"/>
+<pad name="IN0-" x="-9.25" y="6.625" drill="0.8"/>
+<pad name="IN0+" x="-9.25" y="-4" drill="0.8"/>
+<pad name="IN1+" x="-9.25" y="-6.625" drill="0.8"/>
+<pad name="OUT1-" x="9.25" y="4" drill="0.8"/>
+<pad name="OUT0-" x="9.25" y="6.625" drill="0.8"/>
+<pad name="OUT0+" x="9.25" y="-4" drill="0.8"/>
+<pad name="OUT1+" x="9.25" y="-6.625" drill="0.8"/>
+<wire x1="-10.795" y1="8.255" x2="10.795" y2="8.255" width="0.127" layer="21"/>
+<wire x1="10.795" y1="8.255" x2="10.795" y2="-8.255" width="0.127" layer="21"/>
+<wire x1="10.795" y1="-8.255" x2="-10.795" y2="-8.255" width="0.127" layer="21"/>
+<wire x1="-10.795" y1="-8.255" x2="-10.795" y2="8.255" width="0.127" layer="21"/>
+<text x="0" y="1.27" size="1.27" layer="21" align="bottom-center">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="TACTILE-SPST">
@@ -5425,6 +5443,21 @@ https://www.adafruit.com/product/1489</description>
 <pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
 <pin name="P$2" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
 <text x="0" y="6.096" size="1.778" layer="95" align="bottom-center">&gt;Name</text>
+</symbol>
+<symbol name="SEEED-MP1584">
+<pin name="IN1-" x="-15.24" y="5.08" visible="pin" length="middle"/>
+<pin name="IN0-" x="-15.24" y="10.16" visible="pin" length="middle"/>
+<pin name="IN0+" x="-15.24" y="-5.08" visible="pin" length="middle"/>
+<pin name="IN1+" x="-15.24" y="-10.16" visible="pin" length="middle"/>
+<pin name="OUT1-" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="OUT0-" x="15.24" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="OUT0+" x="15.24" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="OUT1+" x="15.24" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<wire x1="-12.7" y1="12.7" x2="12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="12.7" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-12.7" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<text x="0" y="0" size="1.27" layer="95" align="center">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5447,6 +5480,31 @@ https://www.adafruit.com/product/1489</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="SEEED-MP1584">
+<description>Adjustable Step-Down DC&amp;DC Converter (0.8V - 18V&amp;3A)
+SKU 106990005
+https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-(0.8V-18V%26amp%3B3A)-p-1716.html#</description>
+<gates>
+<gate name="G$1" symbol="SEEED-MP1584" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SEEED-MP1584">
+<connects>
+<connect gate="G$1" pin="IN0+" pad="IN0+"/>
+<connect gate="G$1" pin="IN0-" pad="IN0-"/>
+<connect gate="G$1" pin="IN1+" pad="IN1+"/>
+<connect gate="G$1" pin="IN1-" pad="IN1-"/>
+<connect gate="G$1" pin="OUT0+" pad="OUT0+"/>
+<connect gate="G$1" pin="OUT0-" pad="OUT0-"/>
+<connect gate="G$1" pin="OUT1+" pad="OUT1+"/>
+<connect gate="G$1" pin="OUT1-" pad="OUT1-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -5462,10 +5520,6 @@ https://www.adafruit.com/product/1489</description>
 <part name="BBB" library="adafruit" deviceset="BEAGLEBONE_OUTLINE" device=""/>
 <part name="SHLD1" library="SparkFun-Connectors" deviceset="M08" device=""/>
 <part name="SHLD0" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
-<part name="6V5I" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
-<part name="6V5O" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
-<part name="5VI" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
-<part name="5VO" library="SparkFun-Connectors" deviceset="M06" device="SILK_FEMALE_PTH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -5476,9 +5530,7 @@ https://www.adafruit.com/product/1489</description>
 <part name="BATT" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="6V5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="100UF-25V-20%(PTH)" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -5526,6 +5578,10 @@ https://www.adafruit.com/product/1489</description>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF-50V-20%(PTH)" device="KIT-EZ"/>
 <part name="S1" library="michel" deviceset="TACTILE-SPST-6MM-SLIM" device=""/>
+<part name="U6V5" library="michel" deviceset="SEEED-MP1584" device=""/>
+<part name="U5V" library="michel" deviceset="SEEED-MP1584" device=""/>
+<part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5533,9 +5589,9 @@ https://www.adafruit.com/product/1489</description>
 <text x="210.82" y="17.78" size="1.778" layer="91">Title: BBB cape for my robot</text>
 <text x="210.82" y="15.24" size="1.778" layer="91">Project: Marcus</text>
 <text x="210.82" y="12.7" size="1.778" layer="91">Author: Michel Lavoie</text>
-<text x="210.82" y="10.16" size="1.778" layer="91">Revision : 0.1.0</text>
-<text x="210.82" y="7.62" size="1.778" layer="91">Date: 2016-12-11</text>
-<text x="53.34" y="12.7" size="1.778" layer="91">VCC = 6.5V, from DC-DC converter
+<text x="210.82" y="10.16" size="1.778" layer="91">Revision : 0.1.1</text>
+<text x="210.82" y="7.62" size="1.778" layer="91">Date: 2016-12-15</text>
+<text x="68.58" y="12.7" size="1.778" layer="91">VCC = 6.5V, from DC-DC converter
 VDD = 5.0V, from DC-DC converter
 
 3.3V, from BBB
@@ -5545,10 +5601,6 @@ VDD = 5.0V, from DC-DC converter
 <instance part="BBB" gate="G$1" x="124.46" y="109.22"/>
 <instance part="SHLD1" gate="G$1" x="15.24" y="149.86" rot="MR180"/>
 <instance part="SHLD0" gate="G$1" x="12.7" y="170.18" rot="MR180"/>
-<instance part="6V5I" gate="G$1" x="35.56" y="111.76" rot="MR180"/>
-<instance part="6V5O" gate="G$1" x="35.56" y="81.28" rot="MR180"/>
-<instance part="5VI" gate="G$1" x="35.56" y="53.34" rot="MR180"/>
-<instance part="5VO" gate="G$1" x="35.56" y="22.86" rot="MR180"/>
 <instance part="GND1" gate="1" x="22.86" y="175.26" rot="R180"/>
 <instance part="GND2" gate="1" x="86.36" y="175.26" rot="R180"/>
 <instance part="GND3" gate="1" x="162.56" y="175.26" rot="R180"/>
@@ -5556,14 +5608,12 @@ VDD = 5.0V, from DC-DC converter
 <instance part="GND5" gate="1" x="162.56" y="109.22" rot="R180"/>
 <instance part="GND6" gate="1" x="86.36" y="43.18"/>
 <instance part="GND7" gate="1" x="162.56" y="43.18"/>
-<instance part="BATT" gate="G$1" x="10.16" y="66.04" rot="MR180"/>
-<instance part="GND8" gate="1" x="20.32" y="71.12" rot="R180"/>
-<instance part="GND9" gate="1" x="43.18" y="99.06"/>
-<instance part="GND10" gate="1" x="43.18" y="68.58"/>
-<instance part="GND11" gate="1" x="43.18" y="40.64"/>
-<instance part="GND12" gate="1" x="43.18" y="10.16"/>
-<instance part="6V5" gate="G$1" x="43.18" y="88.9"/>
-<instance part="C1" gate="G$1" x="20.32" y="48.26" rot="R180"/>
+<instance part="BATT" gate="G$1" x="12.7" y="114.3" rot="MR180"/>
+<instance part="GND8" gate="1" x="30.48" y="119.38" rot="R180"/>
+<instance part="GND9" gate="1" x="58.42" y="50.8"/>
+<instance part="GND11" gate="1" x="27.94" y="10.16"/>
+<instance part="6V5" gate="G$1" x="58.42" y="78.74"/>
+<instance part="C1" gate="G$1" x="30.48" y="96.52" rot="R180"/>
 <instance part="SUPPLY2" gate="G$1" x="30.48" y="172.72"/>
 <instance part="BPR" gate="G$1" x="45.72" y="162.56" rot="MR180"/>
 <instance part="R1" gate="G$1" x="60.96" y="175.26"/>
@@ -5600,15 +5650,19 @@ VDD = 5.0V, from DC-DC converter
 <instance part="GND17" gate="1" x="220.98" y="58.42" rot="R180"/>
 <instance part="SUPPLY13" gate="G$1" x="228.6" y="55.88"/>
 <instance part="SUPPLY14" gate="VDD" x="71.12" y="106.68"/>
-<instance part="SUPPLY1" gate="VDD" x="43.18" y="30.48"/>
+<instance part="SUPPLY1" gate="VDD" x="58.42" y="38.1"/>
 <instance part="SUPPLY15" gate="VDD" x="177.8" y="106.68"/>
 <instance part="GND18" gate="1" x="22.86" y="134.62"/>
 <instance part="IRFIZ34E" gate="G$1" x="132.08" y="22.86"/>
 <instance part="J1" gate="G$1" x="144.78" y="30.48" rot="MR0"/>
-<instance part="C2" gate="G$1" x="10.16" y="48.26"/>
+<instance part="C2" gate="G$1" x="38.1" y="96.52"/>
 <instance part="GND19" gate="1" x="134.62" y="10.16"/>
 <instance part="C3" gate="G$1" x="149.86" y="20.32"/>
 <instance part="S1" gate="G$1" x="55.88" y="137.16"/>
+<instance part="U6V5" gate="G$1" x="43.18" y="66.04" rot="MR180"/>
+<instance part="U5V" gate="G$1" x="43.18" y="25.4"/>
+<instance part="GND10" gate="1" x="27.94" y="50.8"/>
+<instance part="GND12" gate="1" x="58.42" y="10.16"/>
 </instances>
 <busses>
 </busses>
@@ -5666,90 +5720,18 @@ VDD = 5.0V, from DC-DC converter
 </segment>
 <segment>
 <pinref part="BATT" gate="G$1" pin="1"/>
-<wire x1="17.78" y1="66.04" x2="20.32" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="114.3" x2="30.48" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="20.32" y1="66.04" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="114.3" x2="30.48" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="-"/>
-<wire x1="20.32" y1="53.34" x2="20.32" y2="55.88" width="0.1524" layer="91"/>
-<junction x="20.32" y="66.04"/>
+<wire x1="30.48" y1="101.6" x2="30.48" y2="104.14" width="0.1524" layer="91"/>
+<junction x="30.48" y="114.3"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="55.88" x2="20.32" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="53.34" x2="10.16" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="55.88" x2="20.32" y2="55.88" width="0.1524" layer="91"/>
-<junction x="20.32" y="55.88"/>
-<label x="12.7" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="43.18" y1="101.6" x2="43.18" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="6V5I" gate="G$1" pin="3"/>
-<wire x1="43.18" y1="104.14" x2="43.18" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="106.68" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="109.22" x2="43.18" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="111.76" x2="40.64" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="6V5I" gate="G$1" pin="4"/>
-<wire x1="40.64" y1="109.22" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
-<junction x="43.18" y="109.22"/>
-<pinref part="6V5I" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="106.68" x2="43.18" y2="106.68" width="0.1524" layer="91"/>
-<junction x="43.18" y="106.68"/>
-<pinref part="6V5I" gate="G$1" pin="6"/>
-<wire x1="40.64" y1="104.14" x2="43.18" y2="104.14" width="0.1524" layer="91"/>
-<junction x="43.18" y="104.14"/>
-</segment>
-<segment>
-<pinref part="6V5O" gate="G$1" pin="3"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="40.64" y1="81.28" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="81.28" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="6V5O" gate="G$1" pin="6"/>
-<wire x1="43.18" y1="78.74" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="76.2" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="73.66" x2="43.18" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="73.66" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
-<junction x="43.18" y="73.66"/>
-<pinref part="6V5O" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="76.2" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
-<junction x="43.18" y="76.2"/>
-<pinref part="6V5O" gate="G$1" pin="4"/>
-<wire x1="40.64" y1="78.74" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
-<junction x="43.18" y="78.74"/>
-</segment>
-<segment>
-<pinref part="5VI" gate="G$1" pin="3"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="40.64" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="53.34" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="5VI" gate="G$1" pin="4"/>
-<wire x1="43.18" y1="50.8" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="48.26" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="45.72" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
-<junction x="43.18" y="50.8"/>
-<pinref part="5VI" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
-<junction x="43.18" y="48.26"/>
-<pinref part="5VI" gate="G$1" pin="6"/>
-<wire x1="40.64" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
-<junction x="43.18" y="45.72"/>
-</segment>
-<segment>
-<pinref part="5VO" gate="G$1" pin="3"/>
-<pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="40.64" y1="22.86" x2="43.18" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="22.86" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="5VO" gate="G$1" pin="4"/>
-<wire x1="43.18" y1="20.32" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="17.78" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="15.24" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="20.32" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
-<junction x="43.18" y="20.32"/>
-<pinref part="5VO" gate="G$1" pin="5"/>
-<wire x1="40.64" y1="17.78" x2="43.18" y2="17.78" width="0.1524" layer="91"/>
-<junction x="43.18" y="17.78"/>
-<pinref part="5VO" gate="G$1" pin="6"/>
-<wire x1="40.64" y1="15.24" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
-<junction x="43.18" y="15.24"/>
+<wire x1="30.48" y1="104.14" x2="30.48" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="101.6" x2="38.1" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="104.14" x2="30.48" y2="104.14" width="0.1524" layer="91"/>
+<junction x="30.48" y="104.14"/>
+<label x="30.48" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="GND13" gate="1" pin="GND"/>
@@ -5814,42 +5796,75 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="149.86" y1="15.24" x2="134.62" y2="15.24" width="0.1524" layer="91"/>
 <junction x="134.62" y="15.24"/>
 </segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="58.42" y1="53.34" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U6V5" gate="G$1" pin="OUT0-"/>
+<pinref part="U6V5" gate="G$1" pin="OUT1-"/>
+<wire x1="58.42" y1="60.96" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
+<junction x="58.42" y="55.88"/>
+<label x="55.88" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="U6V5" gate="G$1" pin="IN0-"/>
+<wire x1="27.94" y1="53.34" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U6V5" gate="G$1" pin="IN1-"/>
+<wire x1="27.94" y1="60.96" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<junction x="27.94" y="55.88"/>
+<label x="25.4" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="GND12" gate="1" pin="GND"/>
+<pinref part="U5V" gate="G$1" pin="OUT1+"/>
+<wire x1="58.42" y1="12.7" x2="58.42" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U5V" gate="G$1" pin="OUT0+"/>
+<wire x1="58.42" y1="15.24" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
+<junction x="58.42" y="15.24"/>
+<label x="55.88" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="U5V" gate="G$1" pin="IN1+"/>
+<wire x1="27.94" y1="12.7" x2="27.94" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U5V" gate="G$1" pin="IN0+"/>
+<wire x1="27.94" y1="15.24" x2="27.94" y2="20.32" width="0.1524" layer="91"/>
+<junction x="27.94" y="15.24"/>
+<label x="25.4" y="20.32" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VBAT" class="0">
 <segment>
 <pinref part="BATT" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="63.5" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="63.5" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="63.5" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="5VI" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="58.42" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="5VI" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="55.88" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="55.88" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<junction x="43.18" y="58.42"/>
-<wire x1="25.4" y1="63.5" x2="25.4" y2="121.92" width="0.1524" layer="91"/>
-<junction x="25.4" y="63.5"/>
-<wire x1="25.4" y1="121.92" x2="43.18" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="121.92" x2="43.18" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="6V5I" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="116.84" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="114.3" x2="40.64" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="6V5I" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="116.84" x2="43.18" y2="116.84" width="0.1524" layer="91"/>
-<junction x="43.18" y="116.84"/>
-<pinref part="C1" gate="G$1" pin="+"/>
-<wire x1="20.32" y1="45.72" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="43.18" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
-<label x="27.94" y="121.92" size="1.778" layer="95"/>
-<label x="27.94" y="63.5" size="1.778" layer="95"/>
+<wire x1="20.32" y1="111.76" x2="22.86" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="91.44" x2="22.86" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="45.72" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
-<junction x="20.32" y="43.18"/>
-<label x="12.7" y="40.64" size="1.778" layer="95"/>
-<label x="45.72" y="55.88" size="1.778" layer="95"/>
-<label x="45.72" y="114.3" size="1.778" layer="95"/>
+<wire x1="38.1" y1="93.98" x2="38.1" y2="91.44" width="0.1524" layer="91"/>
+<junction x="22.86" y="91.44"/>
+<label x="22.86" y="88.9" size="1.778" layer="95"/>
+<wire x1="38.1" y1="91.44" x2="30.48" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="91.44" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="91.44" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+<junction x="38.1" y="91.44"/>
+<pinref part="U5V" gate="G$1" pin="IN1-"/>
+<wire x1="22.86" y1="76.2" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="71.12" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="35.56" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="30.48" x2="27.94" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U5V" gate="G$1" pin="IN0-"/>
+<wire x1="27.94" y1="35.56" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
+<junction x="22.86" y="35.56"/>
+<pinref part="U6V5" gate="G$1" pin="IN0+"/>
+<wire x1="27.94" y1="71.12" x2="22.86" y2="71.12" width="0.1524" layer="91"/>
+<junction x="22.86" y="71.12"/>
+<pinref part="U6V5" gate="G$1" pin="IN1+"/>
+<wire x1="27.94" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+<junction x="22.86" y="76.2"/>
+<label x="22.86" y="35.56" size="1.778" layer="95"/>
+<label x="22.86" y="76.2" size="1.778" layer="95"/>
+<pinref part="C1" gate="G$1" pin="+"/>
+<wire x1="30.48" y1="93.98" x2="30.48" y2="91.44" width="0.1524" layer="91"/>
+<junction x="30.48" y="91.44"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -6175,17 +6190,6 @@ VDD = 5.0V, from DC-DC converter
 <label x="223.52" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="6V5O" gate="G$1" pin="1"/>
-<pinref part="6V5" gate="G$1" pin="VCC"/>
-<wire x1="40.64" y1="86.36" x2="43.18" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="86.36" x2="43.18" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="6V5O" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="83.82" x2="43.18" y2="86.36" width="0.1524" layer="91"/>
-<junction x="43.18" y="86.36"/>
-<label x="45.72" y="83.82" size="1.778" layer="95"/>
-</segment>
-<segment>
 <label x="127" y="33.02" size="1.778" layer="95"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="25.4" x2="149.86" y2="40.64" width="0.1524" layer="91"/>
@@ -6195,6 +6199,15 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="134.62" y1="40.64" x2="149.86" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="127" y1="33.02" x2="134.62" y2="33.02" width="0.1524" layer="91"/>
 <junction x="134.62" y="33.02"/>
+</segment>
+<segment>
+<pinref part="U6V5" gate="G$1" pin="OUT0+"/>
+<pinref part="6V5" gate="G$1" pin="VCC"/>
+<wire x1="58.42" y1="71.12" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="U6V5" gate="G$1" pin="OUT1+"/>
+<wire x1="58.42" y1="76.2" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
+<junction x="58.42" y="76.2"/>
+<label x="58.42" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="UART1_TX" class="0">
@@ -6323,22 +6336,20 @@ VDD = 5.0V, from DC-DC converter
 <label x="73.66" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="5VO" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="27.94" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="VDD" pin="VDD"/>
-<wire x1="43.18" y1="27.94" x2="43.18" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="5VO" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="25.4" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
-<junction x="43.18" y="27.94"/>
-<label x="45.72" y="25.4" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="BBB" gate="G$1" pin="VDD_5V@2"/>
 <wire x1="152.4" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="SUPPLY15" gate="VDD" pin="VDD"/>
 <wire x1="177.8" y1="99.06" x2="177.8" y2="106.68" width="0.1524" layer="91"/>
 <label x="170.18" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U5V" gate="G$1" pin="OUT1-"/>
+<pinref part="U5V" gate="G$1" pin="OUT0-"/>
+<wire x1="58.42" y1="30.48" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="VDD" pin="VDD"/>
+<wire x1="58.42" y1="35.56" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
+<junction x="58.42" y="35.56"/>
+<label x="58.42" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
