@@ -5591,7 +5591,7 @@ https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-(0.8V-1
 <text x="210.82" y="12.7" size="1.778" layer="91">Author: Michel Lavoie</text>
 <text x="210.82" y="10.16" size="1.778" layer="91">Revision : 0.1.1</text>
 <text x="210.82" y="7.62" size="1.778" layer="91">Date: 2016-12-15</text>
-<text x="68.58" y="12.7" size="1.778" layer="91">VCC = 6.5V, from DC-DC converter
+<text x="83.82" y="25.4" size="1.778" layer="91">VCC = 6.5V, from DC-DC converter
 VDD = 5.0V, from DC-DC converter
 
 3.3V, from BBB
@@ -5959,9 +5959,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="22.86" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BBB" gate="G$1" pin="GPIO1_30"/>
-<wire x1="81.28" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
-<label x="81.28" y="144.78" size="1.778" layer="95"/>
+<pinref part="BBB" gate="G$1" pin="UART4_RXD"/>
+<wire x1="81.28" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+<label x="81.28" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SHLD2" class="0">
@@ -5971,9 +5971,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="22.86" y="149.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BBB" gate="G$1" pin="GPIO1_4"/>
-<wire x1="81.28" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
-<label x="81.28" y="142.24" size="1.778" layer="95"/>
+<pinref part="BBB" gate="G$1" pin="GPIO3_21"/>
+<wire x1="81.28" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+<label x="81.28" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SHLD3" class="0">
@@ -5983,9 +5983,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="22.86" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BBB" gate="G$1" pin="GPIO1_0"/>
-<wire x1="81.28" y1="139.7" x2="96.52" y2="139.7" width="0.1524" layer="91"/>
-<label x="81.28" y="139.7" size="1.778" layer="95"/>
+<pinref part="BBB" gate="G$1" pin="GPIO3_19"/>
+<wire x1="81.28" y1="71.12" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
+<label x="81.28" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -5995,9 +5995,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="22.86" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BBB" gate="G$1" pin="GPIO2_22"/>
-<wire x1="81.28" y1="137.16" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
-<label x="81.28" y="137.16" size="1.778" layer="95"/>
+<pinref part="BBB" gate="G$1" pin="UART2_RXD"/>
+<wire x1="167.64" y1="78.74" x2="152.4" y2="78.74" width="0.1524" layer="91"/>
+<label x="160.02" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="FREE" class="0">
@@ -6007,9 +6007,9 @@ VDD = 5.0V, from DC-DC converter
 <label x="22.86" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BBB" gate="G$1" pin="GPIO2_23"/>
-<wire x1="81.28" y1="134.62" x2="96.52" y2="134.62" width="0.1524" layer="91"/>
-<label x="81.28" y="134.62" size="1.778" layer="95"/>
+<pinref part="BBB" gate="G$1" pin="SPI1_CS0"/>
+<wire x1="165.1" y1="71.12" x2="152.4" y2="71.12" width="0.1524" layer="91"/>
+<label x="160.02" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BCOM" class="0">
@@ -6079,11 +6079,6 @@ VDD = 5.0V, from DC-DC converter
 <pinref part="BBB" gate="G$1" pin="TIMER6"/>
 <wire x1="167.64" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <label x="160.02" y="160.02" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="68.58" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
-<label x="60.96" y="137.16" size="1.778" layer="95"/>
-<pinref part="S1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -6313,7 +6308,7 @@ VDD = 5.0V, from DC-DC converter
 <net name="AIN3" class="0">
 <segment>
 <pinref part="BBB" gate="G$1" pin="AIN3"/>
-<wire x1="167.64" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
 <label x="160.02" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -6363,13 +6358,25 @@ VDD = 5.0V, from DC-DC converter
 <net name="FEU" class="0">
 <segment>
 <pinref part="BBB" gate="G$1" pin="GPIO1_17"/>
-<wire x1="83.82" y1="76.2" x2="96.52" y2="76.2" width="0.1524" layer="91"/>
-<label x="83.82" y="76.2" size="1.778" layer="95"/>
+<wire x1="81.28" y1="76.2" x2="96.52" y2="76.2" width="0.1524" layer="91"/>
+<label x="81.28" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IRFIZ34E" gate="G$1" pin="G"/>
 <wire x1="121.92" y1="20.32" x2="129.54" y2="20.32" width="0.1524" layer="91"/>
 <label x="121.92" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AUX_BTN" class="0">
+<segment>
+<pinref part="BBB" gate="G$1" pin="SPI1_DO"/>
+<wire x1="81.28" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+<label x="81.28" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="137.16" x2="63.5" y2="137.16" width="0.1524" layer="91"/>
+<label x="60.96" y="137.16" size="1.778" layer="95"/>
+<pinref part="S1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 </nets>
