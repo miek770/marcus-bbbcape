@@ -13,6 +13,7 @@ The cape should be stackable, which means that P8 and P9 should be female header
 
 ## To do list
 
+- Move the top headers' titles below them, otherwise they will be hidden by the right-angle headers I plan on using;
 - Correct title, it's partially hidden by the P9 header;
 - Output 6.5V somewhere other than for the camera. Some other system may very well need it;
 - I don't like how the rangefinders' pins are mirrored, but I've added indications. If it's not too complicated I'd like to mirror 2 of them;
