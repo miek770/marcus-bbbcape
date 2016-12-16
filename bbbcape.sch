@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5432,6 +5432,10 @@ https://www.seeedstudio.com/Adjustable-Step-Down-DC%26amp%3BDC-Converter-(0.8V-1
 <wire x1="10.795" y1="-8.255" x2="-10.795" y2="-8.255" width="0.127" layer="21"/>
 <wire x1="-10.795" y1="-8.255" x2="-10.795" y2="8.255" width="0.127" layer="21"/>
 <text x="0" y="1.27" size="1.27" layer="21" align="bottom-center">&gt;NAME</text>
+<text x="-7.62" y="5.08" size="1.27" layer="21">IN-</text>
+<text x="-7.62" y="-5.08" size="1.27" layer="21" align="top-left">IN+</text>
+<text x="7.62" y="5.08" size="1.27" layer="21" align="bottom-right">OUT-</text>
+<text x="7.62" y="-5.08" size="1.27" layer="21" align="top-right">OUT+</text>
 </package>
 </packages>
 <symbols>
@@ -5636,19 +5640,19 @@ VDD = 5.0V, from DC-DC converter
 <instance part="R2" gate="G$1" x="220.98" y="109.22"/>
 <instance part="R3" gate="G$1" x="205.74" y="109.22"/>
 <instance part="GND14" gate="1" x="220.98" y="119.38" rot="R180"/>
-<instance part="SUPPLY10" gate="G$1" x="228.6" y="116.84"/>
+<instance part="SUPPLY10" gate="G$1" x="228.6" y="111.76" rot="R90"/>
 <instance part="R4" gate="G$1" x="220.98" y="88.9"/>
 <instance part="R5" gate="G$1" x="205.74" y="88.9"/>
 <instance part="GND15" gate="1" x="220.98" y="99.06" rot="R180"/>
-<instance part="SUPPLY11" gate="G$1" x="228.6" y="96.52"/>
+<instance part="SUPPLY11" gate="G$1" x="228.6" y="91.44" rot="R90"/>
 <instance part="R6" gate="G$1" x="220.98" y="68.58"/>
 <instance part="R7" gate="G$1" x="205.74" y="68.58"/>
 <instance part="GND16" gate="1" x="220.98" y="78.74" rot="R180"/>
-<instance part="SUPPLY12" gate="G$1" x="228.6" y="76.2"/>
+<instance part="SUPPLY12" gate="G$1" x="228.6" y="71.12" rot="R90"/>
 <instance part="R8" gate="G$1" x="220.98" y="48.26"/>
 <instance part="R9" gate="G$1" x="205.74" y="48.26"/>
 <instance part="GND17" gate="1" x="220.98" y="58.42" rot="R180"/>
-<instance part="SUPPLY13" gate="G$1" x="228.6" y="55.88"/>
+<instance part="SUPPLY13" gate="G$1" x="228.6" y="50.8" rot="R90"/>
 <instance part="SUPPLY14" gate="VDD" x="71.12" y="106.68"/>
 <instance part="SUPPLY1" gate="VDD" x="58.42" y="38.1"/>
 <instance part="SUPPLY15" gate="VDD" x="177.8" y="106.68"/>
@@ -5757,6 +5761,7 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="200.66" y1="88.9" x2="198.12" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="88.9" x2="198.12" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="93.98" x2="220.98" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="RF_AV_GA" gate="J$1" pin="1"/>
 <wire x1="220.98" y1="93.98" x2="231.14" y2="93.98" width="0.1524" layer="91"/>
 <junction x="220.98" y="93.98"/>
 </segment>
@@ -5767,6 +5772,7 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="200.66" y1="68.58" x2="198.12" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="68.58" x2="198.12" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="73.66" x2="220.98" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="RF_AV_MI" gate="J$1" pin="1"/>
 <wire x1="220.98" y1="73.66" x2="231.14" y2="73.66" width="0.1524" layer="91"/>
 <junction x="220.98" y="73.66"/>
 </segment>
@@ -5777,6 +5783,7 @@ VDD = 5.0V, from DC-DC converter
 <wire x1="200.66" y1="48.26" x2="198.12" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="48.26" x2="198.12" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="53.34" x2="220.98" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="RF_AR_MI" gate="J$1" pin="1"/>
 <wire x1="220.98" y1="53.34" x2="231.14" y2="53.34" width="0.1524" layer="91"/>
 <junction x="220.98" y="53.34"/>
 </segment>
@@ -5904,28 +5911,23 @@ VDD = 5.0V, from DC-DC converter
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="5V"/>
-<wire x1="228.6" y1="116.84" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="RF_AV_DR" gate="J$1" pin="2"/>
 <wire x1="228.6" y1="111.76" x2="231.14" y2="111.76" width="0.1524" layer="91"/>
-<label x="226.06" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="SUPPLY11" gate="G$1" pin="5V"/>
-<wire x1="228.6" y1="96.52" x2="228.6" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="RF_AV_GA" gate="J$1" pin="2"/>
 <wire x1="228.6" y1="91.44" x2="231.14" y2="91.44" width="0.1524" layer="91"/>
-<label x="226.06" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="G$1" pin="5V"/>
-<wire x1="228.6" y1="76.2" x2="228.6" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="RF_AV_MI" gate="J$1" pin="2"/>
 <wire x1="228.6" y1="71.12" x2="231.14" y2="71.12" width="0.1524" layer="91"/>
-<label x="226.06" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="SUPPLY13" gate="G$1" pin="5V"/>
-<wire x1="228.6" y1="55.88" x2="228.6" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RF_AR_MI" gate="J$1" pin="2"/>
 <wire x1="228.6" y1="50.8" x2="231.14" y2="50.8" width="0.1524" layer="91"/>
-<label x="226.06" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DEAD" class="0">
@@ -6229,31 +6231,6 @@ VDD = 5.0V, from DC-DC converter
 <label x="218.44" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="RF_AV_DR" gate="J$1" pin="3"/>
-<wire x1="226.06" y1="109.22" x2="231.14" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="88.9" x2="231.14" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="68.58" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="48.26" x2="231.14" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="AIN2" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -6379,9 +6356,60 @@ VDD = 5.0V, from DC-DC converter
 <pinref part="S1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="RF_AV_DR" gate="J$1" pin="3"/>
+<wire x1="226.06" y1="109.22" x2="231.14" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="RF_AV_GA" gate="J$1" pin="3"/>
+<wire x1="226.06" y1="88.9" x2="231.14" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="RF_AV_MI" gate="J$1" pin="3"/>
+<wire x1="226.06" y1="68.58" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="RF_AR_MI" gate="J$1" pin="3"/>
+<wire x1="226.06" y1="48.26" x2="231.14" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,96.52,101.6,BBB,VDD_3V3EXP,3.3V,,,"/>
+<approved hash="104,1,152.4,101.6,BBB,VDD_3V3EXP,3.3V,,,"/>
+<approved hash="104,1,96.52,99.06,BBB,VDD_5V,VDD,,,"/>
+<approved hash="104,1,152.4,99.06,BBB,VDD_5V,VDD,,,"/>
+<approved hash="104,1,96.52,96.52,BBB,SYS_5V,5V,,,"/>
+<approved hash="202,1,96.52,53.34,BBB,CLKOUT2,,,,"/>
+<approved hash="113,1,17.1027,147.125,SHLD1,,,,,"/>
+<approved hash="113,1,17.1027,167.445,SHLD0,,,,,"/>
+<approved hash="113,1,17.1027,111.565,BATT,,,,,"/>
+<approved hash="113,1,29.5498,97.79,C1,,,,,"/>
+<approved hash="113,1,50.1227,161.095,BPR,,,,,"/>
+<approved hash="113,1,234.357,167.445,MOT,,,,,"/>
+<approved hash="113,1,234.357,139.505,CAM,,,,,"/>
+<approved hash="113,1,234.357,110.295,RF_AV_DR,,,,,"/>
+<approved hash="113,1,234.357,89.9753,RF_AV_GA,,,,,"/>
+<approved hash="113,1,234.357,69.6553,RF_AV_MI,,,,,"/>
+<approved hash="113,1,234.357,49.3353,RF_AR_MI,,,,,"/>
+<approved hash="113,1,135.129,22.86,IRFIZ34E,,,,,"/>
+<approved hash="113,1,140.377,33.2147,J1,,,,,"/>
+<approved hash="113,1,39.6017,97.79,C2,,,,,"/>
+<approved hash="113,1,151.362,21.59,C3,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
