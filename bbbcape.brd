@@ -142,10 +142,9 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="53.645" y2="0" width="0" layer="20"/>
-<wire x1="53.645" y1="0" x2="53.645" y2="58.41" width="0" layer="20"/>
-<wire x1="53.645" y1="58.41" x2="0" y2="58.41" width="0" layer="20"/>
-<wire x1="0" y1="58.41" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="53.645" y1="0" x2="53.645" y2="58.41" width="0.254" layer="20"/>
+<wire x1="53.645" y1="58.41" x2="0" y2="58.41" width="0.254" layer="20"/>
+<wire x1="0" y1="58.41" x2="0" y2="0" width="0.254" layer="21"/>
 <text x="6.35" y="52.07" size="1.778" layer="21">+</text>
 <text x="13.97" y="52.07" size="1.778" layer="21">1</text>
 <text x="29.21" y="52.07" size="1.778" layer="21">1</text>
@@ -161,6 +160,11 @@
 <text x="40.005" y="51.7525" size="0.8128" layer="21">BBBCape 0.1.1</text>
 <text x="40.005" y="50.4825" size="0.8128" layer="21">Michel Lavoie</text>
 <text x="40.005" y="49.2125" size="0.8128" layer="21">2016-12-15</text>
+<wire x1="0" y1="0" x2="12.065" y2="0" width="0.254" layer="20"/>
+<wire x1="12.065" y1="0" x2="14.605" y2="2.54" width="0.254" layer="20"/>
+<wire x1="14.605" y1="2.54" x2="38.735" y2="2.54" width="0.254" layer="20"/>
+<wire x1="38.735" y1="2.54" x2="41.275" y2="0" width="0.254" layer="20"/>
+<wire x1="41.275" y1="0" x2="53.6575" y2="0" width="0.254" layer="20"/>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
