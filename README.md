@@ -13,6 +13,7 @@ The cape should be stackable, which means that P8 and P9 should be female header
 
 ## To do list
 
+- Add battery voltage monitoring (remember the 1.8V analog input limitation);
 - Move the top headers' titles below them, otherwise they will be hidden by the right-angle headers I plan on using;
 - Correct title, it's partially hidden by the P9 header;
 - Output 6.5V somewhere other than for the camera. Some other system may very well need it;
